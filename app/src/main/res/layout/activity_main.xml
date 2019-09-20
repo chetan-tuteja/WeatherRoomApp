@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/Primer"
+        tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="5dp"
+            android:layout_margin="16dp"
+            app:layout_constraintVertical_bias="0.273"
+            android:elevation="2dp"
+            app:cardMaxElevation="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+    >
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="36sp"
+                    android:text="City Name"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:gravity="center"
+                    android:id="@+id/cardCityName"/>
+
+            <com.github.pwittchen.weathericonview.WeatherIconView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cardCityName"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/cardWeatherIcon"
+                    app:weatherIconSize="100"
+                    app:weatherIconResource="@string/wi_owm_day_501"
+            />
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="30sp"
+                    android:text="Weather"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:gravity="center"
+                    android:layout_below="@id/cardWeatherIcon"
+                    android:id="@+id/cardWeatherDesc"/>
+
+
+        </RelativeLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
